@@ -1,33 +1,105 @@
+<!DOCTYPE html>
 <html>
-<style>
-  h1 {
-    font-family: Roboto, Avenir;
-    color: blue;
-  }
-  h2 {
-    font-family: Roboto, Avenir;
-    color: blue;
-  }
-  body {
-    font-family: Roboto, Avenir;
-    text-align: center;
-  }
-</style>
-<h1>Cyndrella's Portfolio</h1>
-<img src="sunset.jpg" alt="A beautiful orange sunset over hills">
-<h2>About Me</h2>
-<p>I am a cybersecurity enthusiast. I am an aspiring Microsoft Student Ambassador.</p>
-<h2>Projects</h2>
-<p>As a developer, I have worked on a number of projects. This is because I am passionate about the tech <br> space and the oppportunities that come with it.</p>
-<ol>
-  <li> <a href="https://github.com/Esthappen/hello-woorld">To the world</a> was my first project.</li>
-  <li> <a href="https://github.com/Esthappen/my-favorite-things">Mis cosas favoritas</a> is about my favorite things.</li>
-</ol>
-<h2>Background</h2>
-<blockquote>I am a student at Multimedia University of Kenya. I do enjoy attending webinars in the <br> technology space. I am a member of Women in Security Kenya. </blockquote>
-<h2>Hobbies</h2
-  <ul>
-    <li>Of recent, my interest in Kpop has highly increased. </li>
-    <li>I am tiktok famous, or at least I'm trying to be.</li>
-  </ul>
+<head>
+    <meta charset="utf-8" />
+    <title>CYNDRELLA PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>CYNDRELLA WAFULA</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(portimages/uno.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="logos/logo3.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            I have participated in Game of Learners Competition by Microsoft Africa Development Center. 
+                        </div>
+                    </div>
+   
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(portimages/tres.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="logos/logo3.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            A web developer with experience in building with Javascript, CSS and HTML.
+                        </div>
+                    </div>
+   
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(portimages/quatre.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="logos/logo2.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            I am conversant with Microsoft Azure and echnologies that entail cloud computing.
+                        </div>
+                    </div>
+   
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(portimages/cinco.jpg)"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="logos/logo2.png" alt="">
+                        </div>
+
+                        <div class="subtitle">
+                            I am passionate about using Mixed Reality to change the perception of time and space.
+                        </div>
+                    </div>
+   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const portfolioItems =document.querySelectorAll('.portfolio-items-wrapper')
+
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListerner('mouseover', () => {
+            portfolioItem.childNodes[1].classList.add ('img-darken');
+        })
+        portfolioItem.addEventListerner('mouseout', () => {
+            portfolioItem.childNodes[1].classList.remove ('img-darken'); 
+        })
+    })
+</script>
 </html>
